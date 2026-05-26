@@ -31,6 +31,13 @@
     "close": "Fermer",
     "default": "Appelez votre ange gardien pour obtenir de l'aide !"
   },
+  "qr": {
+    "title": "🔗 Inviter un joueur",
+    "description": "Scannez ce QR code pour rejoindre l'histoire",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "close": "Fermer"
+  },
   "stories": {
     "1": {
       "title": "La Première Édition Disparue",
@@ -105,6 +112,44 @@
         "3": {
           "title": "Réponse",
           "description": "Réponse : Shen Yuting (avocate, droitière).\n\nRaisonnement :\n\n① Shen Yuting a prétendu aller aux toilettes mais a pris la direction du bureau, et son absence a duré sept minutes — largement suffisant pour chercher et prendre le manuscrit (informations complémentaires). Cui Ming a un alibi et Xiang Zhe n'a jamais quitté sa place.\n\n② La rayure droite sur le tiroir (#1) : tenir un objet fin de la main droite (comme le bord d'une pochette) pour forcer le côté droit correspond aux habitudes d'une droitière ; si c'était le gaucher Cui Ming, la rayure serait à gauche.\n\n③ Les fibres de laine beige sur le chambranle (#3) : l'écharpe en laine beige de Shen Yuting a accroché le chambranle en passant, à environ 110 cm de hauteur, ce qui correspond à la hauteur du bas de l'écharpe ou de la bandoulière.\n\n④ L'empreinte en cuir sur la boîte en bois (#2) : les dimensions correspondent à la fine pochette en cuir de Shen Yuting — elle a posé la pochette sur la boîte pour libérer ses mains et forcer le tiroir, puis a glissé le manuscrit à l'intérieur.\n\n⑤ L'odeur de cuir (#4) : provenant du grand sac en cuir brun de Shen Yuting — le bureau n'avait pas d'odeur de cuir à l'origine, et la persistance de cette odeur prouve qu'une personne portant des objets en cuir s'y est attardée."
+        }
+      }
+    },
+    "5": {
+      "title": "L'Alexandrite Disparue",
+      "subtitle": "Un après-midi de début de printemps à Amsterdam, dans la salle d'exposition privée d'un joaillier. Trois minutes d'évacuation pour alarme incendie — une précieuse alexandrite s'évanouit. Trois visiteurs : lequel a profité de la confusion ?",
+      "intro": "Un après-midi de début de printemps à Amsterdam, dans la salle d'exposition privée du joaillier Van Houten. Il présente à trois clients une alexandrite œil-de-chat d'une rareté extrême — bleu-vert à la lumière du jour, rose-violet sous la lumière artificielle 💎. La pierre repose sur un présentoir en velours blanc, sous une boîte en verre non verrouillée.\n\nHolstein ⌚ (horloger, droitier), veste sans manches gris anthracite, gants fins en coton, portant un écrin rigide pour montres.\n\nMira 💍 (créatrice joaillière, gauchère), grand manteau en laine gris argent, ses doigts portent de légères traces de produit de polissage métallique, un sac structuré à fermeture magnétique en bandoulière 👜.\n\nDaryl 📋 (spécialiste de ventes aux enchères, droitier), veste en lin bleu marine, une large pochette en cuir sous le bras.\n\nÀ quatorze heures trente, l'alarme incendie retentit brusquement 🚨. Les clients évacuent vers le couloir. Trois minutes plus tard, l'alerte est levée. De retour dans la salle, le couvercle de la boîte est toujours en place — mais l'alexandrite a disparu ❗️\n\nQuestion : Qui a profité de la confusion de l'évacuation pour subtiliser la pierre 🕵️ ?",
+      "levels": {
+        "1": {
+          "title": "Indices",
+          "description": "#1 Trace sur le présentoir : Dans l'angle inférieur gauche du présentoir en velours blanc, on remarque une fine marque de produit de polissage, compatible avec le contact d'un doigt portant des résidus de ce produit.\n\n#2 Rayure sur le couvercle : À la charnière gauche du couvercle en verre, on distingue une rayure fraîche, indiquant que le couvercle a été soulevé depuis le côté gauche en premier.\n\n#3 Fibre textile : Coincée dans le loquet du bord de la boîte en verre, une courte fibre d'environ 1 cm en laine gris argent.\n\n#4 Enregistrement de présence : Dans les sept minutes précédant l'alarme, le système de détection de la salle indique qu'une personne se tenait en permanence dans un rayon d'un mètre du présentoir ; dans le même intervalle, les deux autres se trouvaient respectivement près du joaillier et vers l'entrée."
+        },
+        "2": {
+          "title": "Informations complémentaires",
+          "description": "Lorsque l'alarme a retenti, Holstein se tenait aux côtés de M. Van Houten et est sorti avec lui parmi les premiers — le joaillier peut en témoigner.\n\nDaryl a été le premier à atteindre l'extrémité du couloir ; les enregistrements de surveillance montrent qu'il n'avait que sa pochette en cuir, sans objet supplémentaire.\n\nMira a affirmé qu'avant l'alarme, elle examinait les tourmalines exposées de l'autre côté du présentoir. Cependant, les données du système de détection indiquent qu'aucune présence continue n'a été enregistrée de ce côté durant cette période (#4).\n\nLa pierre mesure environ 1,5 cm et peut aisément être glissée dans la doublure d'un sac à fermeture magnétique ; durant l'évacuation, le couloir était bien éclairé et les trois personnes restaient visibles, mais personne n'a prêté attention aux gestes précis de chacun."
+        },
+        "3": {
+          "title": "Réponse",
+          "description": "Réponse : Mira (créatrice joaillière, gauchère).\n\nRaisonnement :\n\n① Les données de présence (#4) montrent qu'une personne se tenait continuellement près du présentoir sept minutes avant l'alarme — Holstein était avec le joaillier, Daryl proche de l'entrée ; seule Mira contredit les données en prétendant regarder les tourmalines de l'autre côté, prouvant qu'elle était en réalité au plus près du présentoir.\n\n② La rayure fraîche à la charnière gauche (#2) : une gauchère soulève naturellement le couvercle en posant le pouce gauche sur la charnière gauche — la direction de la rayure correspond précisément à cette gestuelle ; Mira est la seule gauchère parmi les trois suspects.\n\n③ La marque de produit de polissage dans l'angle gauche du présentoir (#1) est cohérente avec les résidus sur les doigts de Mira : lors du prélèvement de la pierre, ses doigts ont effleuré le bord du présentoir.\n\n④ La fibre en laine gris argent (#3) correspond à la couleur et à la texture du bord de manche ou de l'ourlet du manteau de Mira, coincée dans le loquet au moment où elle soulevait le couvercle.\n\n⑤ Durant l'évacuation, le sac à fermeture magnétique s'ouvre silencieusement et la pierre peut être glissée à l'intérieur en quelques secondes — dans l'agitation de l'alarme, personne n'a remarqué ses gestes discrets."
+        }
+      }
+    },
+    "6": {
+      "title": "Le Manuscrit du Salon",
+      "subtitle": "Un soir d'automne profond à Istanbul, dans un salon littéraire privé. Le temps d'un appel téléphonique — dix minutes —, le précieux manuscrit autographe d'un poète légendaire disparaît de son présentoir. Trois invités du monde culturel : qui a agi dans l'ombre ?",
+      "intro": "Un soir d'automne à Istanbul. La maîtresse de maison, Ayşe Hanım, invite trois convives à admirer sa nouvelle acquisition : le manuscrit autographe du légendaire poète Orhan, posé dans un présentoir ouvert au centre du salon, sous un couvercle en verre non verrouillé 📜.\n\nİrem 📚 (bibliophile, droitière), vêtue d'un grand manteau bleu-vert profond, portant un sac cabas en cuir à structure rigide ; ses doigts dégagent parfois l'odeur du vieux papier et des reliures en cuir.\n\nSelcan ✒️ (calligraphe, gaucher), portant une chemise en lin indigo, avec de l'encre fraîche sur le côté de la main gauche, un étui à parchemin en cuir sous le bras.\n\nKadir 📖 (historien, droitier), en veste en tweed à carreaux, traces de craie sur les coudes, portant un sac messager en toile.\n\nÀ dix-neuf heures précises, l'assistant entre pour prévenir Ayşe Hanım d'un appel urgent. Elle quitte le salon une dizaine de minutes. À son retour, le plateau du présentoir est vide — le manuscrit a disparu ❗️\n\nQuestion : Qui, pendant ces dix minutes, a subtilement emporté le manuscrit 🕵️ ?",
+      "levels": {
+        "1": {
+          "title": "Indices",
+          "description": "#1 Rayure sur le boîtier : Sur la pince de fixation droite du boîtier transparent, on remarque une rayure fraîche ; sa direction indique que le boîtier a été forcé depuis le côté droit en premier.\n\n#2 Fibre textile : Sur le bord droit du plateau du présentoir, une courte fibre d'environ 0,8 cm, bleu-vert foncé, compatible avec un tissu épais de manteau.\n\n#3 Empreinte sur le plateau : Sur la doublure en velours du plateau, une légère empreinte rectangulaire d'environ 26 × 17 cm, comme si un objet plat avait reposé brièvement dessus — correspondant aux dimensions de la paroi intérieure d'un sac plat.\n\n#4 Enregistrement infrarouge : Le capteur infrarouge passif du salon indique que, dans les neuf minutes précédant le départ d'Ayşe Hanım, une personne se tenait en permanence dans un rayon d'un mètre du présentoir ; dans le même intervalle, les deux autres se trouvaient respectivement à la table de travail et dans la zone de la bibliothèque près de l'entrée."
+        },
+        "2": {
+          "title": "Informations complémentaires",
+          "description": "Selcan est resté à sa table d'écriture à pratiquer la calligraphie ; Kadir, assis en face, peut en témoigner — ni l'un ni l'autre n'a quitté sa place.\n\nKadir indique qu'il a feuilleté les livres de la bibliothèque murale près de l'entrée, ce qui est cohérent avec les déclarations de Selcan.\n\nİrem a affirmé être restée près de la bibliothèque côté ouest à feuilleter de vieux recueils de poèmes, mais les données infrarouges indiquent qu'aucune présence continue n'a été enregistrée dans cette zone durant cette période (#4).\n\nLe manuscrit, de format A4, est mince et peut être glissé à plat dans la couche intérieure d'un sac cabas."
+        },
+        "3": {
+          "title": "Réponse",
+          "description": "Réponse : İrem (bibliophile, droitière).\n\nRaisonnement :\n\n① Les données du capteur infrarouge (#4) montrent qu'une personne se tenait en permanence près du présentoir pendant neuf minutes — Selcan et Kadir s'alibi mutuellement ; seule İrem contredit les données en prétendant être à la bibliothèque ouest, prouvant qu'elle était en réalité postée devant le présentoir.\n\n② La rayure fraîche sur la pince droite (#1) : une droitière force naturellement depuis le côté droit, ce qui correspond aux habitudes d'une personne droitière ; si c'était le gaucher Selcan, la rayure se trouverait à gauche.\n\n③ La fibre bleu-vert (#2) : sa couleur et sa texture correspondent au bord de manche ou à l'ourlet du manteau bleu-vert d'İrem, accrochée sur le bord droit du plateau au moment où elle se penchait pour prendre le manuscrit.\n\n④ L'empreinte rectangulaire sur le plateau (#3) : ses dimensions (~26 × 17 cm) correspondent à la paroi intérieure du sac cabas rigide d'İrem — elle a posé le sac sur le plateau pour libérer ses mains, forcé le boîtier et glissé le manuscrit à plat à l'intérieur.\n\n⑤ La connaissance approfondie des pièces rares propre à une bibliophile lui permet d'authentifier et d'extraire le manuscrit rapidement, sans laisser de traces supplémentaires."
         }
       }
     }

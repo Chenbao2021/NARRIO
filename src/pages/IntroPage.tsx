@@ -1,9 +1,11 @@
-import { useMemo, useCallback, JSX } from "react";
+import { useMemo, useCallback, useState, JSX } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, IconButton, Typography } from "@mui/material";
+import IosShareIcon from "@mui/icons-material/IosShare";
 import { useTranslation } from "react-i18next";
 import TypewriterText from "../components/TypewriterText";
 import TimerDisplay from "../components/TimerDisplay";
+import QRModal from "../components/QRModal";
 import { useStories } from "../hooks/useStories";
 import "./IntroPage.less";
 
@@ -53,6 +55,8 @@ export default function IntroPage(): JSX.Element {
     navigate("/");
   }, [navigate]);
 
+  const [qrOpen, setQrOpen] = useState(false);
+
   if (!story) {
     return (
       <Box className="intro-page intro-page--notfound">
@@ -72,7 +76,12 @@ export default function IntroPage(): JSX.Element {
           >
             {t("intro.back")}
           </Button>
-          <TimerDisplay />
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <IconButton onClick={() => setQrOpen(true)} size="small" aria-label="Inviter">
+              <IosShareIcon fontSize="small" />
+            </IconButton>
+            <TimerDisplay />
+          </Box>
         </Box>
 
         <Box className="intro-page__content">
@@ -110,6 +119,8 @@ export default function IntroPage(): JSX.Element {
           </Button>
         </Box>
       </Container>
+
+      <QRModal open={qrOpen} onClose={() => setQrOpen(false)} storyId={storyId!} />
     </Box>
   );
 }

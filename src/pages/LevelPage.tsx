@@ -7,11 +7,13 @@ import {
   JSX,
 } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, IconButton, Typography } from "@mui/material";
+import IosShareIcon from "@mui/icons-material/IosShare";
 import { useTranslation } from "react-i18next";
 import TypewriterText from "../components/TypewriterText";
 import TimerDisplay from "../components/TimerDisplay";
 import CodeModal from "../components/CodeModal";
+import QRModal from "../components/QRModal";
 import { useTimer, formatElapsed } from "../context/TimerContext";
 import { useStories } from "../hooks/useStories";
 import "./LevelPage.less";
@@ -76,6 +78,7 @@ export default function LevelPage(): JSX.Element {
   );
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [qrOpen, setQrOpen] = useState(false);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -163,7 +166,12 @@ export default function LevelPage(): JSX.Element {
                 {level.title}
               </Typography>
             </Box>
-            <TimerDisplay />
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <IconButton onClick={() => setQrOpen(true)} size="small" aria-label="Inviter">
+                <IosShareIcon fontSize="small" />
+              </IconButton>
+              <TimerDisplay />
+            </Box>
           </Box>
 
           <Box className="level-page__progress">
@@ -244,6 +252,8 @@ export default function LevelPage(): JSX.Element {
         onConfirm={handleModalConfirm}
         expectedCode={level.code ?? ""}
       />
+
+      <QRModal open={qrOpen} onClose={() => setQrOpen(false)} storyId={storyId!} />
     </Box>
   );
 }

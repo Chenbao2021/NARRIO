@@ -53,4 +53,16 @@ export const storiesMeta: StoryMeta[] = [
     emoji: '🌙',
     levels: [{ id: 1 }, { id: 2, code: '56' }, { id: 3 }],
   },
+  {
+    id: 5,
+    colorKey: 'yellow',
+    emoji: '💎',
+    levels: [{ id: 1 }, { id: 2, code: '17' }, { id: 3 }],
+  },
+  {
+    id: 6,
+    colorKey: 'blue',
+    emoji: '📜',
+    levels: [{ id: 1 }, { id: 2, code: '64' }, { id: 3 }],
+  },
 ]
