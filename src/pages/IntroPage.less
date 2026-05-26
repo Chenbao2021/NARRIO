@@ -1,0 +1,93 @@
+@import '../styles/mixins.less';
+
+.intro-page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &--notfound {
+    padding: 24px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    padding: 16px !important;
+    @media @md { padding: 32px 24px !important; }
+  }
+
+  &__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__back-btn {
+    font-family: 'Caveat', cursive !important;
+    font-size: 1.1rem !important;
+    color: @text-secondary !important;
+    text-transform: none !important;
+    min-width: auto !important;
+    padding: 4px 8px !important;
+    &:hover { background: @accent-light !important; }
+  }
+
+  &__content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding-bottom: 100px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.82rem;
+    color: @muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  &__story-card {
+    .sketch-border();
+    .flat-shadow();
+    background: #fffef9;
+    padding: 20px;
+    margin-top: 8px;
+    @media @md { padding: 28px; }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background: linear-gradient(transparent, @bg 40%);
+  }
+
+  &__cta {
+    font-family: 'Caveat', cursive !important;
+    font-size: 1.3rem !important;
+    background: @dark !important;
+    color: #fff !important;
+    border: 2px solid @dark !important;
+    border-radius: 4px 12px 8px 4px !important;
+    padding: 10px 40px !important;
+    text-transform: none !important;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15) !important;
+    &:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.18) !important;
+    }
+  }
+}

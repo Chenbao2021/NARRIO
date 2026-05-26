@@ -1,0 +1,58 @@
+@import './styles/mixins.less';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+body {
+  margin: 0;
+  background: @bg;
+  font-family: 'Nunito', sans-serif;
+  color: @dark;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes navProgressFill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+@keyframes spinnerRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-8px); }
+  50%  { transform: translateX(8px); }
+  75%  { transform: translateX(-8px); }
+  100% { transform: translateX(0); }
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.highlight {
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    left: -2px; right: -2px; bottom: 0;
+    height: 50%;
+    background: rgba(202, 138, 4, 0.25);
+    z-index: -1;
+    border-radius: 2px;
+  }
+}
+.highlight-green::after { background: rgba(110, 231, 183, 0.35); }
+.highlight-blue::after  { background: rgba(147, 197, 253, 0.35); }
+.highlight-pink::after  { background: rgba(249, 168, 212, 0.35); }

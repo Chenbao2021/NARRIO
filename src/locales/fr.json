@@ -1,0 +1,112 @@
+{
+  "main": {
+    "subtitle": "Explorez des mystères interactifs et profitez du plaisir de la déduction",
+    "levels": "{{count}} niveaux",
+    "start": "Commencer →",
+    "hint": "Cliquez sur une carte pour entrer dans l'histoire, trouvez la vérité et saisissez le code pour déverrouiller la réponse"
+  },
+  "intro": {
+    "back": "← Retour",
+    "label": "Prologue",
+    "clues": "Voir les indices →"
+  },
+  "level": {
+    "back": "← Retour",
+    "backHome": "← Retour à l'accueil",
+    "finish": "🏠 Accueil",
+    "nextKey": "🔑 {{title}}",
+    "nextArrow": "{{title}} →",
+    "nextFallback": "Suivant",
+    "elapsed": "Temps : {{time}}"
+  },
+  "code": {
+    "title": "🔑 Entrez le code",
+    "error": "Code incorrect, réessayez",
+    "hint": "Indice : la réponse à la question est le code 🕵️",
+    "cancel": "Annuler",
+    "confirm": "Confirmer"
+  },
+  "help": {
+    "title": "💡 Aide",
+    "close": "Fermer",
+    "default": "Appelez votre ange gardien pour obtenir de l'aide !"
+  },
+  "stories": {
+    "1": {
+      "title": "La Première Édition Disparue",
+      "subtitle": "Une librairie ancienne de la Rive Gauche à Paris, une nuit de pluie. Une rare première édition disparaît en pleine coupure d'électricité. Parmi trois habitués, l'un cache un secret dans l'obscurité.",
+      "intro": "Une librairie ancienne sur la Rive Gauche à Paris, une nuit de pluie, la pendule sonne 19h20. Je viens rendre visite au libraire, M. Dupont. Ce soir, trois habitués sont présents :\n\nClaire 🎨 (illustratrice, gauchère), vêtue d'un manteau au parfum de lavande 🌿, venue consulter un album d'illustrations marines 🌊.\n\nMarc 💼 (antiquaire, droitier), passionné par les discussions sur les prix du marché 💰, portant des gants de cuir 🧤.\n\nJulien ✒️ (poète, gaucher), assis dans son coin habituel à écrire de la poésie 📖, des traces fraîches d'encre sur les mains 🖋️.\n\nDans la vitrine en verre 🪟 derrière le comptoir est exposée une rare première édition de « Lettres de la Mer du Nord » 📗. À 19h22, un coup de tonnerre ⚡️ éclate, coupant l'électricité pendant 40 secondes — seul un mince rayon de lumière filtre depuis le lampadaire de la rue 🌃. Le libraire part vérifier le tableau électrique 🚪 ; les clients restent sur place.\n\nLorsque la lumière revient 💡, le libraire s'apprête à me montrer la précieuse édition... mais elle a disparu ❗️ Le comptoir n'était pas verrouillé 🔓, la porte vitrée entrouverte. Quelques petits morceaux de papier ancien sont épars sur le comptoir 🧻, comme si des feuillets fragiles s'étaient effrités au passage.\n\nQuestion : Qui a profité de l'obscurité pour subtiliser le livre et le dissimuler 🕵️‍♀️ ?",
+      "levels": {
+        "1": {
+          "title": "Indices",
+          "description": "#1 Position de la vitrine : La première édition est placée au rayon intermédiaire de la vitrine, dont la porte s'ouvre côté intérieur du comptoir.\n\n#2 Miettes de papier et trajectoire : Deux ou trois petits morceaux de vieux papier sont tombés sur le comptoir, avec une traînée orientée de l'intérieur vers l'extérieur, comme si quelqu'un avait tiré le livre vers soi depuis l'intérieur de la vitrine. La direction pointe vers la zone clients.\n\n#3 Traces d'encre : Sur le bord de la porte vitrée, une fine ligne d'encre est visible, à environ 110 cm du sol — comme si le dos d'une main ou une manche l'avait effleurée.\n\n#4 Un parfum inhabituel : Le long du comptoir, on perçoit un parfum de lavande prononcé, plus fort que d'habitude, comme si quelqu'un s'était récemment approché."
+        },
+        "2": {
+          "title": "Informations complémentaires",
+          "description": "Lors de la coupure, le libraire est parti au tableau électrique ; j'étais près de la porte à regarder la pluie, sans me déplacer.\n\nClaire était la première arrivée et feuilletait un album au comptoir ; Marc était près des présentoirs de cartes et m'avait salué ; Julien était assis à sa table d'écriture contre le mur, regardant parfois vers le comptoir.\n\nLe tapis à l'entrée est mouillé mais ne présente aucune nouvelle empreinte, ce qui suggère que le livre n'a pas été emporté dehors immédiatement — il a d'abord été dissimulé sur la personne ou dans ses affaires."
+        },
+        "3": {
+          "title": "Réponse",
+          "description": "Réponse : Claire (illustratrice, gauchère, parfum de lavande).\n\nRaisonnement :\n\n① Qui pouvait trouver la poignée de la vitrine dans le noir ? Seule la personne déjà proche du comptoir pouvait la localiser précisément (#1). Parmi les trois suspects, Claire était la seule appuyée contre le comptoir en train de consulter un album.\n\n② Preuves physiques : La traînée de miettes va de l'intérieur vers l'extérieur, en direction de la zone clients (#2), indiquant un geste d'extraction. La trace d'encre à 110 cm de hauteur sur le bord gauche de la porte correspond à l'endroit où le dos de la main ou la manche d'une gauchère frapperait naturellement (#3).\n\n③ Repère olfactif : L'intensification du parfum de lavande le long du comptoir (#4) correspond à la signature olfactive du manteau de Claire, prouvant qu'elle s'est approchée au moment de la coupure."
+        }
+      }
+    },
+    "2": {
+      "title": "La Montre de Poche Disparue",
+      "subtitle": "Une maison de thé de Kyoto, un après-midi pluvieux de saison des pluies. Une précieuse montre héritée des ancêtres s'évanouit le temps d'un instant. Qui, parmi les invités, a profité de la distraction pour agir ?",
+      "intro": "Une paisible maison de thé à l'est de Kyoto, un après-midi de saison des pluies. Le maître des lieux, M. Tanaka, a invité trois habitués à déguster du thé et a posé au centre de la table une montre de poche Meiji héritée de ses ancêtres, dans une boîte en verre.\n\nRina 📝 (calligraphe, gauchère), les doigts légèrement tachés d'encre, vêtue d'un cardigan beige, assise à gauche de la boîte d'exposition.\n\nMakoto 🎩 (antiquaire, droitier), portant des gants fins 🧤, assis en face.\n\nMidori 🎨 (étudiante en beaux-arts, droitière), les doigts ornés de peinture fraîche, assise à côté de Makoto.\n\nPeu après 15h, le maître s'est retiré pour refaire du thé, environ deux minutes. Pendant ce temps, Midori a renversé accidentellement sa tasse 💧, et tout le monde s'est affairé à nettoyer. Quand le maître est revenu, le couvercle de la boîte en verre était toujours fermé — mais la montre avait disparu ❗️\n\nQuestion : Qui, en l'espace de ces deux courtes minutes, a subtilement dérobé la montre 🕵️ ?",
+      "levels": {
+        "1": {
+          "title": "Indices",
+          "description": "#1 Traces sur le couvercle : Le couvercle de la boîte en verre est fermé, mais à la charnière gauche se trouve une légère empreinte digitale d'encre, à environ un centimètre du bord gauche du couvercle.\n\n#2 Bouton sur le tapis : Sur le tapis à gauche de la table à thé, on a découvert un petit bouton blanc, d'environ 1,5 cm de diamètre, correspondant au style des boutons d'un cardigan ordinaire.\n\n#3 Direction du thé renversé : Le thé répandu par Midori s'est étalé vers la droite, loin de la boîte d'exposition, indiquant que l'incident s'est produit à une certaine distance de celle-ci.\n\n#4 Déplacement de Rina : Au moment où le maître est parti, Rina s'est levée en disant qu'elle allait aux toilettes, et est revenue environ une minute plus tard, avant le maître."
+        },
+        "2": {
+          "title": "Informations complémentaires",
+          "description": "Quand le thé s'est renversé, Makoto s'est immédiatement levé pour chercher un chiffon, et Midori s'est accroupie pour éponger avec sa serviette — leurs regards étaient tous deux tournés vers le sol.\n\nAvant que le maître ne parte, le couvercle de la boîte était entièrement fermé ; l'ouvrir produisait un léger frottement audible dans la tranquillité de la maison de thé.\n\nLes toilettes se trouvent dans l'arrière-salle, et le chemin passe nécessairement à côté de la boîte d'exposition. Quand Rina est revenue à sa place, elle tenait le devant de son cardigan de la main droite, un geste légèrement plus contraint qu'à l'habitude."
+        },
+        "3": {
+          "title": "Réponse",
+          "description": "Réponse : Rina (calligraphe, gauchère, parfum d'encre).\n\nRaisonnement :\n\n① Rina est partie sous prétexte d'aller aux toilettes, mais son chemin passait obligatoirement devant la boîte d'exposition (#4) — elle était la seule à avoir pu y accéder seule, pendant que Makoto et Midori étaient occupés à nettoyer le thé (informations complémentaires).\n\n② L'empreinte digitale d'encre sur la charnière gauche du couvercle (#1) correspond à l'endroit où le pouce gauche d'une gauchère se poserait naturellement pour soulever le couvercle ; Rina est la seule gauchère du groupe, et l'encre coïncide avec la couleur de l'empreinte.\n\n③ Le bouton blanc tombé sur le tapis à gauche de la table (#2) correspond aux boutons du cardigan beige de Rina — il s'est décroché quand elle s'est penchée pour ouvrir la boîte, accrochant l'angle de celle-ci.\n\n④ Le thé s'est répandu vers la droite, loin de la boîte (#3), ce qui signifie que l'incident était accidentel et non intentionnel ; Rina a agi de façon indépendante, sans complicité.\n\n⑤ En revenant, elle tenait son cardigan fermé (informations complémentaires) — la montre était dissimulée dans la poche du cardigan."
+        }
+      }
+    },
+    "3": {
+      "title": "La Substitution de la Galerie",
+      "subtitle": "Une galerie privée à Shanghai, un vendredi soir d'automne. En cinq secondes d'obscurité, un dessin de maître est remplacé par un faux. Trois collectionneurs, une seule coupable.",
+      "intro": "Une petite galerie privée dans le quartier Jing'an à Shanghai, un vendredi soir de fin d'automne. Le directeur, M. Fang, organise une prévisualisation confidentielle pour trois collectionneurs. Sur le mur est est exposé un dessin signé d'un maître, estimé à deux cent mille yuans, cadre non verrouillé.\n\nZheng Bo 🎩 (collectionneur chevronné, soixantaine, canne dans la main droite), a suivi M. Fang tout au long pour commenter les œuvres.\n\nSong Shuhua 📝 (critique d'art, quarantaine, grande, gauchère), a passé la plupart du temps dans la salle des sculptures à l'ouest.\n\nFélix 💼 (investisseur étranger, trentaine, droitier), portait une serviette sombre, prétendument remplie de « documents contractuels ».\n\nÀ vingt heures, la galerie a subi deux brèves coupures de courant, d'environ cinq secondes chacune, et le vigile est parti vérifier le tableau électrique. À la restauration de la lumière, M. Fang s'est approché du mur est et a senti de près... le dessin avait été discrètement remplacé par un faux ❗️\n\nQuestion : Qui a réussi à effectuer cette substitution dans l'obscurité de cinq secondes 🕵️ ?",
+      "levels": {
+        "1": {
+          "title": "Indices",
+          "description": "#1 Odeur de la copie : La copie de substitution dégage, de près, une légère odeur de térébenthine, indiquant qu'elle a été réalisée récemment.\n\n#2 Rayures sur le crochet : La face arrière du cadre présente de fines rayures fraîches sur le crochet gauche, indiquant que le cadre a été décroché en premier par le côté gauche.\n\n#3 Traces de craie sur le tapis : Devant le dessin, le tapis présente un arc de poussière de craie blanche, comme si elle provenait du dessous ou du dos d'un objet posé là.\n\n#4 Voyant de sortie assombri : Les enregistrements du capteur de la veilleuse de sortie près du mur est indiquent que, dans les vingt minutes précédant la coupure, quelqu'un se tenait en permanence à environ deux mètres devant le capteur, l'obscurcissant continuellement."
+        },
+        "2": {
+          "title": "Informations complémentaires",
+          "description": "Song Shuhua était dans la salle des sculptures à l'ouest avant la coupure, deux employés peuvent en témoigner.\n\nZheng Bo, souffrant d'une jambe, se déplaçait avec difficulté et était constamment assisté par M. Fang, n'ayant pratiquement pas de moments seuls.\n\nLes peintres annotent parfois au craie le dessous d'un dessin pour le cadrage ou le repérage — c'est une pratique courante en atelier. La veilleuse de sortie couvre précisément les deux mètres devant le mur est : seule une personne restant longtemps devant le dessin pouvait continuellement obscurcir le capteur.\n\nLa serviette de Félix s'ouvre par le côté droit, ce qui facilite la prise d'objet avec la main droite."
+        },
+        "3": {
+          "title": "Réponse",
+          "description": "Réponse : Félix (investisseur étranger, droitier).\n\nRaisonnement :\n\n① Les données du capteur de la veilleuse indiquent qu'une personne se tenait en permanence devant le dessin dans les vingt minutes précédant la coupure (#4). Song Shuhua avait des témoins dans la salle ouest ; Zheng Bo était constamment avec M. Fang ; seul Félix avait passé suffisamment de temps près du mur est, prouvant qu'il observait et étudiait la structure du cadre à l'avance.\n\n② Les rayures fraîches sur le crochet gauche (#2) : un droitier décrochant le cadre soutient de sa main droite et soulève d'abord le côté gauche, ce qui correspond parfaitement aux habitudes d'un droitier.\n\n③ La poussière de craie en arc sur le tapis (#3) : les peintres annotent parfois le dessous au craie ; la poussière de la copie a laissé une marque en la posant, ce qui signifie qu'elle avait été préparée à l'avance et dissimulée dans la serviette.\n\n④ L'ouverture droite de la serviette (informations complémentaires) et l'odeur de térébenthine (#1) : dans l'obscurité, la main droite a extrait la copie préparée de la serviette pour effectuer la substitution — l'ensemble du geste ne dépassait pas cinq secondes."
+        }
+      }
+    },
+    "4": {
+      "title": "Le Manuscrit de la Nuit",
+      "subtitle": "Un appartement de Beijing, une nuit d'automne pluvieuse. Le manuscrit unique d'une romancière disparaît pendant un dîner entre amis. Dix minutes d'absence suffisent à masquer un vol audacieux.",
+      "intro": "Une nuit pluvieuse d'automne à Beijing. L'auteure de romans policiers Lin Lan organise un dîner chez elle pour trois amis de longue date. Après le repas, les convives passent au salon pour prendre le thé. La porte du bureau de Lin Lan est entrouverte ; sur la table se trouve le manuscrit complet de son roman en cours — l'unique exemplaire, trois cents pages écrites à la main.\n\nCui Ming 🎬 (réalisateur de cinéma, gaucher), vêtu d'une veste en cuir sombre, resté assis sur le canapé à bavarder avec Xiang Zhe.\n\nShen Yuting ⚖️ (avocate, droitière), portant un grand sac en cuir brun foncé et une écharpe en laine beige autour du cou, avec une fine pochette en cuir.\n\nXiang Zhe 🗒️ (journaliste, droitier), portant un carnet à spirale d'environ 12×17 cm, prenant des notes de temps en temps.\n\nÀ vingt-deux heures, Lin Lan reçoit un appel important et quitte le salon, pendant environ dix minutes. À son retour, elle pousse la porte du bureau... le manuscrit a disparu ❗️\n\nQuestion : Qui, pendant ces dix minutes, s'est introduit discrètement dans le bureau pour emporter le manuscrit 🕵️ ?",
+      "levels": {
+        "1": {
+          "title": "Indices",
+          "description": "#1 Rayures sur le tiroir : Le manuscrit était rangé dans le tiroir droit du bureau ; sur la face droite du tiroir, on remarque une fine rayure, comme si un objet fin avait été inséré pour forcer l'ouverture depuis l'extérieur.\n\n#2 Empreinte sur la boîte en bois : Le dessus du couvercle d'une boîte en bois posée sur le tiroir présente une légère empreinte rectangulaire, d'environ 14 cm × 9 cm, comme si un objet en cuir y avait reposé.\n\n#3 Fibre sur le chambranle : Sur le chambranle de la porte du bureau, à environ 110 cm du sol, on a relevé quelques fibres courtes couleur beige, apparemment en laine.\n\n#4 Odeur de cuir : À l'entrée du bureau, on perçoit une légère odeur de cuir, bien distincte du parfum de thé du salon."
+        },
+        "2": {
+          "title": "Informations complémentaires",
+          "description": "Cui Ming est resté sur le canapé à converser avec Xiang Zhe tout le temps ; Xiang Zhe peut attester que Cui Ming n'a pas quitté sa place.\n\nShen Yuting a dit qu'elle allait aux toilettes, mais celles-ci se trouvent à droite du salon, alors que le bureau est à gauche — elle est partie dans la direction opposée aux toilettes, et son absence a duré sept minutes.\n\nLe carnet de Xiang Zhe mesure environ 12 cm × 17 cm, ce qui ne correspond pas aux dimensions de l'empreinte sur la boîte (14 cm × 9 cm).\n\nShen Yuting portait une fine pochette en cuir, qu'elle disait utiliser pour stocker des brouillons de contrats."
+        },
+        "3": {
+          "title": "Réponse",
+          "description": "Réponse : Shen Yuting (avocate, droitière).\n\nRaisonnement :\n\n① Shen Yuting a prétendu aller aux toilettes mais a pris la direction du bureau, et son absence a duré sept minutes — largement suffisant pour chercher et prendre le manuscrit (informations complémentaires). Cui Ming a un alibi et Xiang Zhe n'a jamais quitté sa place.\n\n② La rayure droite sur le tiroir (#1) : tenir un objet fin de la main droite (comme le bord d'une pochette) pour forcer le côté droit correspond aux habitudes d'une droitière ; si c'était le gaucher Cui Ming, la rayure serait à gauche.\n\n③ Les fibres de laine beige sur le chambranle (#3) : l'écharpe en laine beige de Shen Yuting a accroché le chambranle en passant, à environ 110 cm de hauteur, ce qui correspond à la hauteur du bas de l'écharpe ou de la bandoulière.\n\n④ L'empreinte en cuir sur la boîte en bois (#2) : les dimensions correspondent à la fine pochette en cuir de Shen Yuting — elle a posé la pochette sur la boîte pour libérer ses mains et forcer le tiroir, puis a glissé le manuscrit à l'intérieur.\n\n⑤ L'odeur de cuir (#4) : provenant du grand sac en cuir brun de Shen Yuting — le bureau n'avait pas d'odeur de cuir à l'origine, et la persistance de cette odeur prouve qu'une personne portant des objets en cuir s'y est attardée."
+        }
+      }
+    }
+  }
+}

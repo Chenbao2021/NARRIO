@@ -1,0 +1,135 @@
+@import '../styles/mixins.less';
+
+.level-page {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__container {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px !important;
+    @media @md { padding: 32px 24px !important; }
+  }
+
+  &__sticky-header {
+    flex-shrink: 0;
+    padding-bottom: 12px;
+  }
+
+  &__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+  }
+
+  &__breadcrumb-label {
+    color: @muted;
+  }
+
+  &__breadcrumb-sep {
+    color: @dashed-border;
+  }
+
+  &__breadcrumb-current {
+    color: @dark;
+    font-weight: 600;
+  }
+
+  &__progress {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  &__pip {
+    height: 4px;
+    flex: 1;
+    background: @dashed-border;
+    border-radius: 2px;
+    transition: background 0.3s ease;
+
+    &--done   { background: #9ca3af; }
+    &--active { background: @accent; }
+  }
+
+  &__completion-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    background: @accent-light;
+    border: 1.5px dashed @accent;
+    border-radius: 4px 12px 8px 4px;
+  }
+
+  &__completion-text {
+    font-family: 'Caveat', cursive !important;
+    font-size: 1.4rem !important;
+    color: @accent !important;
+  }
+
+  &__card {
+    .sketch-border();
+    .flat-shadow();
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    background: #fffef9;
+    padding: 20px;
+    padding-bottom: 90px;
+    @media @md { padding: 28px; padding-bottom: 90px; }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+    background: linear-gradient(transparent, @bg 40%);
+  }
+
+  &__btn {
+    font-family: 'Caveat', cursive !important;
+    font-size: 1.15rem !important;
+    text-transform: none !important;
+    border-radius: 4px 9px 6px 4px !important;
+
+    &--back {
+      border-color: @dashed-border !important;
+      color: @text-secondary !important;
+      background: transparent !important;
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.06) !important;
+    }
+
+    &--next,
+    &--finish {
+      background: @dark !important;
+      color: #fff !important;
+      border: 2px solid @dark !important;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15) !important;
+      padding: 8px 28px !important;
+      &:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.18) !important;
+      }
+    }
+  }
+}
