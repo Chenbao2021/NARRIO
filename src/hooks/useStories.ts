@@ -15,6 +15,9 @@ export function useStories(): Story[] {
           ...level,
           title: t(`stories.${meta.id}.levels.${level.id}.title`),
           description: t(`stories.${meta.id}.levels.${level.id}.description`),
+          ...(level.correctAnswer !== undefined && {
+            choices: t(`stories.${meta.id}.levels.${level.id}.choices`, { returnObjects: true }) as string[],
+          }),
         })),
       })),
     // t changes reference when language changes, triggering recompute

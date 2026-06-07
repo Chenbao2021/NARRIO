@@ -14,15 +14,14 @@
     "back": "← Retour",
     "backHome": "← Retour à l'accueil",
     "finish": "🏠 Accueil",
-    "nextKey": "🔑 {{title}}",
+    "nextQuiz": "🕵️ {{title}}",
     "nextArrow": "{{title}} →",
     "nextFallback": "Suivant",
     "elapsed": "Temps : {{time}}"
   },
-  "code": {
-    "title": "🔑 Entrez le code",
-    "error": "Code incorrect, réessayez",
-    "hint": "Indice : la réponse à la question est le code 🕵️",
+  "quiz": {
+    "title": "🕵️ Qui est le coupable ?",
+    "error": "Ce n'est pas la bonne réponse, réessayez",
     "cancel": "Annuler",
     "confirm": "Confirmer"
   },
@@ -50,7 +49,8 @@
         },
         "2": {
           "title": "Informations complémentaires",
-          "description": "Lors de la coupure, le libraire est parti au tableau électrique ; j'étais près de la porte à regarder la pluie, sans me déplacer.\n\nClaire était la première arrivée et feuilletait un album au comptoir ; Marc était près des présentoirs de cartes et m'avait salué ; Julien était assis à sa table d'écriture contre le mur, regardant parfois vers le comptoir.\n\nLe tapis à l'entrée est mouillé mais ne présente aucune nouvelle empreinte, ce qui suggère que le livre n'a pas été emporté dehors immédiatement — il a d'abord été dissimulé sur la personne ou dans ses affaires."
+          "description": "Lors de la coupure, le libraire est parti au tableau électrique ; j'étais près de la porte à regarder la pluie, sans me déplacer.\n\nClaire était la première arrivée et feuilletait un album au comptoir ; Marc était près des présentoirs de cartes et m'avait salué ; Julien était assis à sa table d'écriture contre le mur, regardant parfois vers le comptoir.\n\nLe tapis à l'entrée est mouillé mais ne présente aucune nouvelle empreinte, ce qui suggère que le livre n'a pas été emporté dehors immédiatement — il a d'abord été dissimulé sur la personne ou dans ses affaires.",
+          "choices": ["Claire 🎨 (illustratrice)", "Marc 💼 (antiquaire)", "Julien ✒️ (poète)"]
         },
         "3": {
           "title": "Réponse",
@@ -69,7 +69,8 @@
         },
         "2": {
           "title": "Informations complémentaires",
-          "description": "Quand le thé s'est renversé, Makoto s'est immédiatement levé pour chercher un chiffon, et Midori s'est accroupie pour éponger avec sa serviette — leurs regards étaient tous deux tournés vers le sol.\n\nAvant que le maître ne parte, le couvercle de la boîte était entièrement fermé ; l'ouvrir produisait un léger frottement audible dans la tranquillité de la maison de thé.\n\nLes toilettes se trouvent dans l'arrière-salle, et le chemin passe nécessairement à côté de la boîte d'exposition. Quand Rina est revenue à sa place, elle tenait le devant de son cardigan de la main droite, un geste légèrement plus contraint qu'à l'habitude."
+          "description": "Quand le thé s'est renversé, Makoto s'est immédiatement levé pour chercher un chiffon, et Midori s'est accroupie pour éponger avec sa serviette — leurs regards étaient tous deux tournés vers le sol.\n\nAvant que le maître ne parte, le couvercle de la boîte était entièrement fermé ; l'ouvrir produisait un léger frottement audible dans la tranquillité de la maison de thé.\n\nLes toilettes se trouvent dans l'arrière-salle, et le chemin passe nécessairement à côté de la boîte d'exposition. Quand Rina est revenue à sa place, elle tenait le devant de son cardigan de la main droite, un geste légèrement plus contraint qu'à l'habitude.",
+          "choices": ["Rina 📝 (calligraphe)", "Makoto 🎩 (antiquaire)", "Midori 🎨 (étudiante en beaux-arts)"]
         },
         "3": {
           "title": "Réponse",
@@ -88,7 +89,8 @@
         },
         "2": {
           "title": "Informations complémentaires",
-          "description": "Song Shuhua était dans la salle des sculptures à l'ouest avant la coupure, deux employés peuvent en témoigner.\n\nZheng Bo, souffrant d'une jambe, se déplaçait avec difficulté et était constamment assisté par M. Fang, n'ayant pratiquement pas de moments seuls.\n\nLes peintres annotent parfois au craie le dessous d'un dessin pour le cadrage ou le repérage — c'est une pratique courante en atelier. La veilleuse de sortie couvre précisément les deux mètres devant le mur est : seule une personne restant longtemps devant le dessin pouvait continuellement obscurcir le capteur.\n\nLa serviette de Félix s'ouvre par le côté droit, ce qui facilite la prise d'objet avec la main droite."
+          "description": "Song Shuhua était dans la salle des sculptures à l'ouest avant la coupure, deux employés peuvent en témoigner.\n\nZheng Bo, souffrant d'une jambe, se déplaçait avec difficulté et était constamment assisté par M. Fang, n'ayant pratiquement pas de moments seuls.\n\nLes peintres annotent parfois au craie le dessous d'un dessin pour le cadrage ou le repérage — c'est une pratique courante en atelier. La veilleuse de sortie couvre précisément les deux mètres devant le mur est : seule une personne restant longtemps devant le dessin pouvait continuellement obscurcir le capteur.\n\nLa serviette de Félix s'ouvre par le côté droit, ce qui facilite la prise d'objet avec la main droite.",
+          "choices": ["Zheng Bo 🎩 (collectionneur)", "Song Shuhua 📝 (critique d'art)", "Félix 💼 (investisseur)"]
         },
         "3": {
           "title": "Réponse",
@@ -107,7 +109,8 @@
         },
         "2": {
           "title": "Informations complémentaires",
-          "description": "Cui Ming est resté sur le canapé à converser avec Xiang Zhe tout le temps ; Xiang Zhe peut attester que Cui Ming n'a pas quitté sa place.\n\nShen Yuting a dit qu'elle allait aux toilettes, mais celles-ci se trouvent à droite du salon, alors que le bureau est à gauche — elle est partie dans la direction opposée aux toilettes, et son absence a duré sept minutes.\n\nLe carnet de Xiang Zhe mesure environ 12 cm × 17 cm, ce qui ne correspond pas aux dimensions de l'empreinte sur la boîte (14 cm × 9 cm).\n\nShen Yuting portait une fine pochette en cuir, qu'elle disait utiliser pour stocker des brouillons de contrats."
+          "description": "Cui Ming est resté sur le canapé à converser avec Xiang Zhe tout le temps ; Xiang Zhe peut attester que Cui Ming n'a pas quitté sa place.\n\nShen Yuting a dit qu'elle allait aux toilettes, mais celles-ci se trouvent à droite du salon, alors que le bureau est à gauche — elle est partie dans la direction opposée aux toilettes, et son absence a duré sept minutes.\n\nLe carnet de Xiang Zhe mesure environ 12 cm × 17 cm, ce qui ne correspond pas aux dimensions de l'empreinte sur la boîte (14 cm × 9 cm).\n\nShen Yuting portait une fine pochette en cuir, qu'elle disait utiliser pour stocker des brouillons de contrats.",
+          "choices": ["Cui Ming 🎬 (réalisateur)", "Shen Yuting ⚖️ (avocate)", "Xiang Zhe 🗒️ (journaliste)"]
         },
         "3": {
           "title": "Réponse",
@@ -126,7 +129,8 @@
         },
         "2": {
           "title": "Informations complémentaires",
-          "description": "Lorsque l'alarme a retenti, Holstein se tenait aux côtés de M. Van Houten et est sorti avec lui parmi les premiers — le joaillier peut en témoigner.\n\nDaryl a été le premier à atteindre l'extrémité du couloir ; les enregistrements de surveillance montrent qu'il n'avait que sa pochette en cuir, sans objet supplémentaire.\n\nMira a affirmé qu'avant l'alarme, elle examinait les tourmalines exposées de l'autre côté du présentoir. Cependant, les données du système de détection indiquent qu'aucune présence continue n'a été enregistrée de ce côté durant cette période (#4).\n\nLa pierre mesure environ 1,5 cm et peut aisément être glissée dans la doublure d'un sac à fermeture magnétique ; durant l'évacuation, le couloir était bien éclairé et les trois personnes restaient visibles, mais personne n'a prêté attention aux gestes précis de chacun."
+          "description": "Lorsque l'alarme a retenti, Holstein se tenait aux côtés de M. Van Houten et est sorti avec lui parmi les premiers — le joaillier peut en témoigner.\n\nDaryl a été le premier à atteindre l'extrémité du couloir ; les enregistrements de surveillance montrent qu'il n'avait que sa pochette en cuir, sans objet supplémentaire.\n\nMira a affirmé qu'avant l'alarme, elle examinait les tourmalines exposées de l'autre côté du présentoir. Cependant, les données du système de détection indiquent qu'aucune présence continue n'a été enregistrée de ce côté durant cette période (#4).\n\nLa pierre mesure environ 1,5 cm et peut aisément être glissée dans la doublure d'un sac à fermeture magnétique ; durant l'évacuation, le couloir était bien éclairé et les trois personnes restaient visibles, mais personne n'a prêté attention aux gestes précis de chacun.",
+          "choices": ["Holstein ⌚ (horloger)", "Mira 💍 (créatrice joaillière)", "Daryl 📋 (spécialiste enchères)"]
         },
         "3": {
           "title": "Réponse",
@@ -145,7 +149,8 @@
         },
         "2": {
           "title": "Informations complémentaires",
-          "description": "Selcan est resté à sa table d'écriture à pratiquer la calligraphie ; Kadir, assis en face, peut en témoigner — ni l'un ni l'autre n'a quitté sa place.\n\nKadir indique qu'il a feuilleté les livres de la bibliothèque murale près de l'entrée, ce qui est cohérent avec les déclarations de Selcan.\n\nİrem a affirmé être restée près de la bibliothèque côté ouest à feuilleter de vieux recueils de poèmes, mais les données infrarouges indiquent qu'aucune présence continue n'a été enregistrée dans cette zone durant cette période (#4).\n\nLe manuscrit, de format A4, est mince et peut être glissé à plat dans la couche intérieure d'un sac cabas."
+          "description": "Selcan est resté à sa table d'écriture à pratiquer la calligraphie ; Kadir, assis en face, peut en témoigner — ni l'un ni l'autre n'a quitté sa place.\n\nKadir indique qu'il a feuilleté les livres de la bibliothèque murale près de l'entrée, ce qui est cohérent avec les déclarations de Selcan.\n\nİrem a affirmé être restée près de la bibliothèque côté ouest à feuilleter de vieux recueils de poèmes, mais les données infrarouges indiquent qu'aucune présence continue n'a été enregistrée dans cette zone durant cette période (#4).\n\nLe manuscrit, de format A4, est mince et peut être glissé à plat dans la couche intérieure d'un sac cabas.",
+          "choices": ["İrem 📚 (bibliophile)", "Selcan ✒️ (calligraphe)", "Kadir 📖 (historien)"]
         },
         "3": {
           "title": "Réponse",

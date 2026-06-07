@@ -12,7 +12,7 @@ import IosShareIcon from "@mui/icons-material/IosShare";
 import { useTranslation } from "react-i18next";
 import TypewriterText from "../components/TypewriterText";
 import TimerDisplay from "../components/TimerDisplay";
-import CodeModal from "../components/CodeModal";
+import QuizModal from "../components/QuizModal";
 import QRModal from "../components/QRModal";
 import { useTimer, formatElapsed } from "../context/TimerContext";
 import { useStories } from "../hooks/useStories";
@@ -99,7 +99,7 @@ export default function LevelPage(): JSX.Element {
 
   const handleNext = useCallback(() => {
     if (!story || !level || !nextLevel) return;
-    if (level.code) {
+    if (level.choices) {
       setModalOpen(true);
     } else {
       navigate(`/story/${storyId}/level/${nextLevel.id}`);
@@ -238,19 +238,20 @@ export default function LevelPage(): JSX.Element {
               onClick={handleNext}
               className="level-page__btn level-page__btn--next"
             >
-              {level.code
-                ? t('level.nextKey', { title: nextLevel?.title ?? t('level.nextFallback') })
+              {level.choices
+                ? t('level.nextQuiz', { title: nextLevel?.title ?? t('level.nextFallback') })
                 : t('level.nextArrow', { title: nextLevel?.title ?? t('level.nextFallback') })}
             </Button>
           )}
         </Box>
       </Container>
 
-      <CodeModal
+      <QuizModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         onConfirm={handleModalConfirm}
-        expectedCode={level.code ?? ""}
+        choices={level.choices ?? []}
+        correctAnswer={level.correctAnswer ?? 0}
       />
 
       <QRModal open={qrOpen} onClose={() => setQrOpen(false)} storyId={storyId!} />
