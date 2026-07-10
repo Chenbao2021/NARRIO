@@ -3,7 +3,8 @@
     "subtitle": "Explorez des mystères interactifs et profitez du plaisir de la déduction",
     "levels": "{{count}} niveaux",
     "start": "Commencer →",
-    "hint": "Cliquez sur une carte pour entrer dans l'histoire, trouvez la vérité et saisissez le code pour déverrouiller la réponse"
+    "hint": "Cliquez sur une carte pour entrer dans l'histoire, trouvez la vérité et saisissez le code pour déverrouiller la réponse",
+    "selectStory": "Aller à l'histoire : {{title}}"
   },
   "intro": {
     "back": "← Retour",

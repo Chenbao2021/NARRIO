@@ -1,8 +1,7 @@
-import { JSX, useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { JSX, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import useEmblaCarousel from "embla-carousel-react";
 import { Story } from "../data/stories";
 import { useStories } from "../hooks/useStories";
 import LanguageSwitcher from "../components/LanguageSwitcher";
@@ -76,74 +75,87 @@ function StoryCard({ story }: { story: Story }): JSX.Element {
   );
 }
 
-const ChevronLeft = (): JSX.Element => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-    <path d="M11 4L6 9L11 14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const ChevronRight = (): JSX.Element => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-    <path d="M7 4L12 9L7 14" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
 function StoriesCarousel(): JSX.Element {
+  const { t } = useTranslation();
   const stories = useStories();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "center", loop: false });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const isFirstRender = useRef(true);
 
-  const scrollPrev = useCallback(() => {
-    setSelectedIndex(prev => Math.max(0, prev - 1));
-  }, []);
-
-  const scrollNext = useCallback(() => {
-    setSelectedIndex(prev => Math.min(stories.length - 1, prev + 1));
-  }, [stories.length]);
-
-  // Sync drag-based navigation on mobile
+  // Center the active slide via native scroll-snap. Embla's transform-based
+  // centering desynced whenever a slide's own width changed (our active/spine
+  // swap), so we drive the browser's own scroll machinery instead.
   useEffect(() => {
-    if (!emblaApi) return;
-    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
-    emblaApi.on("select", onSelect);
-    return () => { emblaApi.off("select", onSelect); };
-  }, [emblaApi]);
+    const slide = slideRefs.current[selectedIndex];
+    if (!slide) return;
+    slide.scrollIntoView({
+      behavior: isFirstRender.current ? "auto" : "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+    isFirstRender.current = false;
+  }, [selectedIndex]);
 
-  // After React renders new active class, recalculate Embla positions and scroll
-  useLayoutEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.reInit();
-    emblaApi.scrollTo(selectedIndex, true);
-  }, [selectedIndex, emblaApi]);
+  // While the user drags/swipes, detect the slide nearest the center once the scroll settles
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    let settleTimeout: ReturnType<typeof setTimeout>;
+    const onScroll = () => {
+      clearTimeout(settleTimeout);
+      settleTimeout = setTimeout(() => {
+        const containerRect = track.getBoundingClientRect();
+        const containerCenter = containerRect.left + containerRect.width / 2;
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        slideRefs.current.forEach((slide, index) => {
+          if (!slide) return;
+          const rect = slide.getBoundingClientRect();
+          const distance = Math.abs(rect.left + rect.width / 2 - containerCenter);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+        setSelectedIndex(prev => (prev === closestIndex ? prev : closestIndex));
+      }, 120);
+    };
+    track.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      track.removeEventListener("scroll", onScroll);
+      clearTimeout(settleTimeout);
+    };
+  }, []);
 
   return (
     <Box className="main-page__carousel-wrapper">
-      <button
-        className="main-page__carousel-btn main-page__carousel-btn--prev"
-        onClick={scrollPrev}
-        aria-label="Précédent"
-      >
-        <ChevronLeft />
-      </button>
-      <Box className="main-page__carousel" ref={emblaRef}>
+      <Box className="main-page__carousel" ref={trackRef}>
         <Box className="main-page__carousel-track">
-          {stories.map((story, index) => (
-            <Box
-              key={story.id}
-              className={`main-page__carousel-slide${index === selectedIndex ? " main-page__carousel-slide--active" : ""}`}
-            >
-              <StoryCard story={story} />
-            </Box>
-          ))}
+          {stories.map((story, index) => {
+            const isActive = index === selectedIndex;
+            return (
+              <Box
+                key={story.id}
+                ref={(el: HTMLDivElement | null) => { slideRefs.current[index] = el; }}
+                className={`main-page__carousel-slide${isActive ? " main-page__carousel-slide--active" : ""}`}
+                onClick={isActive ? undefined : () => setSelectedIndex(index)}
+                role={isActive ? undefined : "button"}
+                tabIndex={isActive ? undefined : 0}
+                aria-label={isActive ? undefined : t('main.selectStory', { title: story.title })}
+                onKeyDown={isActive ? undefined : (e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setSelectedIndex(index);
+                  }
+                }}
+              >
+                <StoryCard story={story} />
+              </Box>
+            );
+          })}
         </Box>
       </Box>
-      <button
-        className="main-page__carousel-btn main-page__carousel-btn--next"
-        onClick={scrollNext}
-        aria-label="Suivant"
-      >
-        <ChevronRight />
-      </button>
     </Box>
   );
 }

@@ -45,8 +45,16 @@
   &__subtitle {
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
+    line-height: 1.4;
     color: @text-secondary;
     margin: 0;
+    // Reserve space for 2 lines so switching language (1 line in zh, 2 in fr)
+    // doesn't change the header's height and push the carousel below it.
+    min-height: calc(1.4em * 2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     @media @md {
       font-size: 1.1rem;
     }
@@ -56,6 +64,7 @@
     display: flex;
     flex: 1;
     align-items: stretch;
+    min-height: 0;
   }
 
   &__carousel-wrapper {
@@ -65,12 +74,19 @@
     gap: 8px;
     width: 100%;
     min-width: 0;
+    min-height: 0;
   }
 
   &__carousel {
     flex: 1;
     min-width: 0;
-    overflow: hidden;
+    min-height: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
   }
 
   &__carousel-track {
@@ -78,13 +94,19 @@
     gap: 16px;
     align-items: stretch;
     height: 100%;
+    min-height: 0;
   }
 
   &__carousel-slide {
-    flex: 0 0 51%;
+    // Peek at the neighbouring spines so a swipe/click affordance is always visible
+    flex: 0 0 22%;
     min-width: 0;
     display: flex;
     height: 100%;
+    cursor: pointer;
+    border-radius: 4px 10px 6px 4px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
     @media @sm { flex: 0 0 17%; }
 
     // Default = narrow book-spine style
@@ -92,6 +114,7 @@
       padding: 24px 10px;
       align-items: center;
       gap: 12px;
+      transition: box-shadow 0.15s ease;
     }
     .main-page__card-emoji { font-size: 2rem; }
     .main-page__card-body { overflow: hidden; width: 100%; }
@@ -109,8 +132,19 @@
     .main-page__card-meta,
     .main-page__card-btn { display: none; }
 
+    &:hover .main-page__card,
+    &:focus-visible .main-page__card {
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus-visible {
+      outline: 2px solid @accent;
+      outline-offset: -3px;
+    }
+
     &--active {
-      flex: 0 0 100%;
+      cursor: default;
+      flex: 0 0 78%;
       @media @sm { flex: 0 0 34%; }
 
       .main-page__card {
@@ -123,41 +157,20 @@
       .main-page__card-title {
         writing-mode: horizontal-tb;
         font-size: 1.8rem !important;
+        line-height: 1.25 !important;
         white-space: normal;
-        overflow: visible;
+        overflow: hidden;
         max-height: none;
         margin: 0 !important;
+        // Reserve space for 2 lines regardless of how the translated title wraps
+        min-height: 2.5em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
       .main-page__card-sub { display: -webkit-box; }
       .main-page__card-meta { display: flex; }
       .main-page__card-btn { display: inline-flex; }
-    }
-  }
-
-  &__carousel-btn {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
-    color: @dark;
-    border: 2px solid @dark;
-    border-radius: 4px 10px 6px 4px;
-    padding: 4px 6px;
-    cursor: pointer;
-    .flat-shadow();
-    .hover-lift();
-
-    &--prev {
-      background: linear-gradient(to right, #d1d5db, #fff);
-    }
-
-    &--next {
-      background: linear-gradient(to right, #fff, #d1d5db);
-    }
-
-    &:active {
-      transform: translateY(1px);
     }
   }
 
@@ -198,12 +211,15 @@
   &__card-sub {
     font-family: "Nunito", sans-serif;
     font-size: 0.9rem;
+    line-height: 1.4;
     color: @text-secondary;
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    // Reserve space for 3 lines regardless of how the translated text wraps
+    min-height: calc(1.4em * 3);
   }
 
   &__card-meta {
@@ -237,9 +253,13 @@
   &__hint {
     font-family: "Nunito", sans-serif;
     font-size: 0.82rem;
+    line-height: 1.4;
     color: @muted;
     text-align: center;
     margin-top: auto;
     padding-top: 24px;
+    // Reserve space for 3 lines (the longest translation needs it) so
+    // switching language doesn't change how much room is left for the carousel above.
+    min-height: calc(24px + 1.4em * 3);
   }
 }
